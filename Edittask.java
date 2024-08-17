@@ -22,7 +22,7 @@ indexNumber = sc.nextInt();
 sc.nextLine();
 System.out.println("Enter a new Edit Task: ");
 
-for(int i = indexNumber; i < Todolist.n; i++){
+for(int i = indexNumber; i <= indexNumber; i++){
     Todolist.task[i] = sc.nextLine();      
 //System.out.println(Todolist.task[i]);
 }

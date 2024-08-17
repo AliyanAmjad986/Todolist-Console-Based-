@@ -4,16 +4,27 @@ import java.util.Scanner;
 
 public class addtask {
 
-    
+  public String[] pasted = new String[Todolist.task.length];
     public int n ;
-    Scanner obj = new Scanner(System.in);
-    public void firstdisplay(){
+  
+  Scanner obj = new Scanner(System.in);
+   void firstsdisplay(){
         System.out.println("Here is your Pervious task: ");
         for(int i = 0; i < Todolist.n; i++){
         System.out.println("Task Number "+i +"# "+Todolist.task[i]);
         }
-    }   
-  //public String[] addtask = new String[n];
+    }  
+    
+    
+    void  copyElement(){
+      if(Todolist.task.length > 0){
+ //   if(copyelement.length > 0){
+     System.arraycopy(Todolist.task, 0, pasted, 0, Todolist.task.length);
+     for(int i = 0; i < Todolist.task.length; i++){
+       System.out.println(pasted[i]);
+
+       }}}
+
 //add input that how many task user add
     void numberofTask(){
         System.out.println(Todolist.n);
@@ -28,24 +39,44 @@ public class addtask {
          obj.nextLine();
          Todolist.n = n;
         }
-        System.out.println(Todolist.n);
+        System.out.println(Todolist.task.length);
         } 
+      
        
    //for addtask to string
     public void additiontask(){
          String[] task =  new String [Todolist.n];
+         System.out.println("Write "+ Todolist.n + " Number of Tasks");
+         if(Todolist.task.length > 0){
+        for(int i= Todolist.n - n ; i < Todolist.n;  i++){
+             
+          System.out.println("Enter " + i +  "# task: " );
+          task[i] = obj.nextLine();   
+      }
       
-        System.out.println("Write "+ Todolist.n + " Number of Tasks");
+    }else {
        //TODO:     
-       for(int i= Todolist.n - n ; i < Todolist.n;  i++){
+       for(int i= 0 ; i < Todolist.n;  i++){
              
     System.out.println("Enter " + i +  "# task: " );
     task[i] = obj.nextLine();   
-}
+}}
     Todolist.task =  task;
+    for(int i = 0; i < Todolist.n; i++){
+      System.out.println(Todolist.task[i]);
+    }
+  
  
  
 }
+void pasteelement(){
+  if(pasted.length > 0){
+    System.arraycopy(pasted, 0, Todolist.task, 0, Todolist.task.length - n);
+    for(int i = 0; i < Todolist.task.length; i++){
+      System.out.println(Todolist.task[i]);
+      }
+  }
+ } 
 
     // for display task
     void display(){
@@ -55,23 +86,9 @@ public class addtask {
     }
     }
    
-     void  copyElement(){
-        String[] copyelement = new String[Todolist.task.length];
-        // if(Todolist.task.length > 0){
-    //   if(copyelement.length > 0){
-        System.arraycopy(Todolist.task, 0, copyelement, 0, Todolist.task.length);
-        for(int i = 0; i < Todolist.task.length; i++){
-          System.out.println(copyelement[i]);
-
-        //  }
-        // System.arraycopy(copyelement, 0, task,0, task.length);
-        // for(int i = 0; i < n; i++){
-        //   System.out.println(task[i]);
-        // }
-        
-        }
-      }
-    
-
-
+   
+   
 }
+
+
+
