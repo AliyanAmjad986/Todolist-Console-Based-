@@ -57,6 +57,7 @@ public static String[] task = new String [n];
       else if(menu == 4){
         compeletetask compeletetask = new compeletetask();
         compeletetask.display();
+        compeletetask.done();
 
       }
     }
