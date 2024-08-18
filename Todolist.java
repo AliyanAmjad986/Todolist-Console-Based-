@@ -54,7 +54,7 @@ public static String[] task = new String [n];
       deletetask.display();
       deletetask.delete();
       }
-      else if(menu == 5){
+      else if(menu == 4){
         compeletetask compeletetask = new compeletetask();
         compeletetask.display();
 
