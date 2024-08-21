@@ -1,6 +1,6 @@
     
 import java.util.Scanner;
-public class Todolist {
+public abstract class Todolist {
 //1
   public static int n = 0 ;
  //2 
@@ -58,6 +58,7 @@ public static String[] task = new String [n];
         compeletetask compeletetask = new compeletetask();
         compeletetask.display();
         compeletetask.done();
+    
 
       }
     }

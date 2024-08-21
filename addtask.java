@@ -20,9 +20,7 @@ public class addtask {
       if(Todolist.task.length > 0){
  //   if(copyelement.length > 0){
      System.arraycopy(Todolist.task, 0, pasted, 0, Todolist.task.length);
-     for(int i = 0; i < Todolist.task.length; i++){
-       System.out.println(pasted[i]);
-
+     for(int i = 0; i < Todolist.task.length; i++){;
        }}}
 
 //add input that how many task user add
